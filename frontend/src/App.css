@@ -1,0 +1,555 @@
+/*@body Main body style start */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #root{
+    height: 100%;
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+  /* Main body style End */
+  
+  
+  /* @MainContainer  Main Container Grid Start */
+  .grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+  }
+  /* Main Container Grid End */
+  
+  /*@header Header style Start */
+  .header{
+    grid-area: header;
+    background-color: #1d4354;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    padding-left: 5rem;
+    box-shadow: 0 0 10px gray;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+  
+  }
+  
+  .header-menu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* @header-logo */
+  .header .header-logo a{
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+  }
+  
+  /* @header-menu */
+  .header .header-menu {
+  
+    padding-right: 5rem;
+  }
+  
+  .header .header-menu a {
+  
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  /* hover on logo and menu */
+  .header .header-logo a:hover{
+    color: green;
+  
+  }
+  
+  .header .header-menu a:hover{
+    color: green;
+  }
+  
+  /* if user log in  then @header-profile */
+  .header-profile{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .header-profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  span.header-name {
+    font-size: 14px;
+  }
+  
+  .users-notification{
+  font-size: 2.5rem;
+  padding-right: 2.5rem;
+  
+  
+  }
+  
+  /* Header style Start */
+  
+  /*@main Main Content Sytle Start */
+  .main{
+    grid-area: main;
+    padding-top:2rem
+  }
+  /*@main-content Component Start */
+  
+  /* Main Content Sytle Start */
+  /* @slideImage Home Folder style component @ImageSliders Start*/
+  .images-Slider{
+    display: flex;
+    justify-content: space-between;
+  }
+  .images-Slider p{
+    cursor: pointer;
+    
+  }
+  .images-Slider img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover
+  }
+  /* @slideImage Home Folder style component @ImageSliders End*/
+  
+  /*Home Folder style component @HowItWork Start  */
+   
+    .how-it-work{
+      background-color: #f1f1f1;
+      padding-top: 1.5rem;
+      
+  
+    }
+    .how-it-work h3{
+        font-weight: bold;
+    }
+  
+    .works{
+       
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        padding-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .works h5{
+      margin-top: 2rem;
+  
+    }
+    .works p{
+        margin-top: 2rem; 
+    }
+  
+    .works div{
+      width: 100%;
+      flex-grow: 4;
+      text-align: center;
+      line-height: 25px;
+      font-size: 16px;
+    }
+  
+    .works div img{
+        border:1px solid black;
+        border-radius: 50%;   
+    }
+  /*Home Folder style component @HowItWork End  */
+  
+  /* Home Folder style component @WhyChoose Start */
+  
+  .whyChoose{
+    padding-top: 1.5rem;
+  }
+  
+  .whyChoose h3{
+    font-weight: bold;
+  }
+  
+  .choose{ 
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    padding-left: 1rem;
+  }
+  
+  .choose div{
+    width: 100%;
+    flex-grow: 4;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  
+  .choose div img{
+    height: 200px;
+    max-height: 100%;
+    max-width: 100%;
+    
+  }
+  
+  /* Home Folder style component @WhyChoose End */
+  
+  /* Home Folder style component @OurTeam Start */
+  .our-team{
+    background-color:#f1f1f1;
+    padding-top: 1.5rem;
+  }
+  
+  .our-team h3{
+    font-weight: bold;
+  }
+  
+  .team{
+    display: flex;
+    padding-top: 1rem;
+    height: 100%;
+    flex-direction: row;
+  }
+  
+  .team div{
+    width: 100%;
+    flex-grow: 4;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+  }
+  
+  .team div img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+  }
+  .team div h3{
+    
+  text-shadow: 3px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+  }
+  /* Home Folder style component @OurTeam Start */
+  
+  /*@footer Footer style Start */
+  .footer{
+    grid-area: footer;
+    background-color: #1d4354;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom:0;
+    right:0;
+    width:100%;
+  }
+  /* Footer style Start */
+  
+  
+  /* For Mobile Responsive Start */
+  @media (max-width:550px){
+    /* header padding */
+    .header{
+      padding-left: 1.5rem;
+    }
+  
+    /* header logo size */
+    .header .header-logo a{
+      font-size: 2rem;
+    }
+  /* header menu right padding */
+    .header .header-menu {
+      padding-right: 2.5rem;
+    }
+  
+    .header .header-menu a {
+      font-size: 1.5rem;
+       padding: 1rem;
+    }
+  
+    /* image slider */
+    .images-Slider img{
+      height: 250px;  
+    }
+  }
+  @media (max-width:850px){
+   /* component @HowItWork work */
+   .works{
+    flex-direction: column;
+  }
+  }
+  
+  @media (max-width:880px){
+    /* component @whyChoose choose */
+    .choose{
+     flex-direction: column;
+   }
+   }
+  
+  
+  @media (max-width:975px){
+     /* component @whyChoose choose images */
+    .choose div img{
+      height: 180px;;
+    }
+     /* component @OurTeam */
+    .team div img{
+      height: 200px;
+      width: 200px;
+    }
+  }
+  
+  
+  @media (max-width:680px){
+  
+  /* component @OurTeam */
+  .team{
+    flex-direction: column;
+    height: 100%;
+  }
+  }
+  
+    /* Form @SignUp Page Start */
+     
+    .form-container{
+      display: flex;
+      /* justify-content: center; */
+      background-color: white;
+      padding: 3rem;
+      margin: 3.5rem 35rem;
+      box-shadow: 0 0 5px;
+      border-radius: 2%;
+      
+    }
+  
+    @media (max-width:900px){
+      .form-container{
+        margin: 30px;
+      }
+  
+    }
+  
+   
+    .form-container input[type=text],input[type=password],select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 10px 0;
+      /* display: inline-block; */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      
+    }
+    
+    .form-container h2{
+      color:  #1d4354;
+    }
+  
+    .form-container input[type=submit] {
+      width: 100%;
+      background-color:  #1d4354;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .form-container input[type=submit]:hover {
+      background-color: #45a049;
+    }
+  
+    /* error handling @ErrorNotice */
+    .error-notice{
+      margin:1.5rem 0;
+      /* border: 1px solid red; */
+      box-shadow: 0 0 2px;
+      background-color: white;
+      padding:0.6rem;
+      display:flex;
+      justify-content: space-between;
+    }
+    
+    .error-notice button{
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      color: aliceblue;
+      background-color: #1d4354;
+    }
+    .error-notice span{
+      color:red;
+    }
+  
+     /* Form @SignUp Page Start */
+  
+   
+  
+     /*@Dashboad SideBar */
+     /* The side navigation menu */
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:rgb(14, 13, 13) ;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    /* box-shadow: 0 0 5px ; */
+  }
+  .hide-sidebar{
+    display: none;
+   
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color:white;
+  
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #45a049;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color:#1d4354;
+    color: white;
+  }
+  .sidebar-profile{
+    display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 5px;
+   margin: 10px;
+    
+  
+  }
+   .sidebar-profile img{
+  
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+  }
+  
+  .sidebar-name{
+    color: white;
+    
+  } 
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 2rem;  
+    height: 1000px;
+  }
+  
+  
+  /* update profile user dash */
+  .form-container-update{
+   display: flex;
+   justify-content: space-around;
+    background-color: white;
+    padding: 3rem;
+    margin: 0 auto;
+    box-shadow: 0 0 5px;
+  
+    
+  }
+  /* @user-profile-pic */
+  .user-profile-pic {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .user-profile-pic img{
+    width: 250px;
+    height: 250px;
+    border: 4px solid #1d4354;
+  }
+  
+  .user-profile-pic button{
+    background-color: #1d4354;
+    margin: 2rem;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    width: auto;
+    
+  }
+  
+  .user-update-form{
+    padding: 0 5rem ;
+  }
+  
+  .form-container-update input[type=text],input[type=password],input[type=file],select {
+    
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    /* display: inline-block; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  
+  
+  .form-container-update input[type=submit] {
+    width: 100%;
+    background-color:  #1d4354;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     
